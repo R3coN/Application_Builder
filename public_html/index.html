@@ -1,0 +1,82 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Application Builder</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script type="text/javascript" src="js/loadWelcome.js"></script>
+        <script type="text/javascript">window.onload = getWelcome;</script>
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+
+        
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span9">
+                    <div id="welcome" class="hero-unit">
+                        <!-- The content for this element is being set by 
+                        the getWelcome() JS function during window.onload 
+                        -->
+                    </div>
+          <div ng-app="" ng-controller="personController">
+
+              First Name: <br><input type="text" ng-model="firstName"><br>
+              Last Name: <br><input type="text" ng-model="lastName"><br>
+              Date Of Leave : <br><input type="date" ng-model="date"><br>
+              Subject: <br><input type="text" ng-model ="subject"><br>
+              Reason: <br><input type="text" ng-model ="reason"><br>
+              Number of days: <br><input type="number" ng-model ="nod" min="0"><br>
+<br>
+Dear Sir,<br>
+I would like to apply for one day leave on {{date}} as {{subject}}.<br>
+{{reason}}<br>
+I hope you understand the urgency and provide me with this leave. I urge you to kindly grant {{nod}} day leave for the same.<br><br>
+
+Waiting for your confirmation.<br><br>
+
+Thank you for your time and consideration.<br><br>
+
+{{firstName + " " + lastName}}<br>
+<br><button><input type ="submit" ng-model ="save" value="save as pdf"></button><br>
+
+</div>
+
+<script>
+function personController($scope) {
+    $scope.firstName="John",
+    $scope.lastName="Doe",
+    $scope.email = "xyz@gmail.com";
+}
+</script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap-transition.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <script src="js/bootstrap-modal.js"></script>
+        <script src="js/bootstrap-dropdown.js"></script>
+        <script src="js/bootstrap-scrollspy.js"></script>
+        <script src="js/bootstrap-tab.js"></script>
+        <script src="js/bootstrap-tooltip.js"></script>
+        <script src="js/bootstrap-popover.js"></script>
+        <script src="js/bootstrap-button.js"></script>
+        <script src="js/bootstrap-collapse.js"></script>
+        <script src="js/bootstrap-carousel.js"></script>
+        <script src="js/bootstrap-typeahead.js"></script>
+
+    </body>
+</html>
